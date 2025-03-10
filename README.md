@@ -78,6 +78,6 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 📞 Contact
 For any inquiries or support, contact:
-- 📧 Email: `shaharbind569@example.com`
+- 📧 Email: `shaharbind569@gmail.com`
 - 🐙 GitHub: [shaharbind](https://github.com/shaharbind)
 ```
