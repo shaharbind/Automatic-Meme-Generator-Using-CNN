@@ -24,24 +24,29 @@ A deep-learning-based web application that generates memes automatically based o
 ```sh
 git clone https://github.com/shaharbind/Automatic-Meme-Generator-Using-CNN.git
 
-### **Step 2: Navigate to the Project Folder**
- ```sh
- cd Automatic-Meme-Generator-Using-CNN
+### Step 2: Navigate to the Project Folder
+```sh
+cd Automatic-Meme-Generator-Using-CNN
+```
 
-### **Step 3: Create and Activate Virtual Environment**
+### Step 3: Create and Activate Virtual Environment
+(Instructions to create and activate the virtual environment go here.)
 
-### **Step 4: Install Dependencies**
+### Step 4: Install Dependencies
 ```sh
 pip install -r requirements.txt
+```
 
-### **Step 5: Run the Application**
+### Step 5: Run the Application
 ```sh
 python app.py
+```
 
-### 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📜 License
+This project is licensed under the MIT license - see the LICENSE file for details.
 
-📞 Contact
+## 📞 Contact
 For any inquiries or support, contact:
-📧 Email: shaharbind569@example.com
-🔗 GitHub: shaharbind
+- 📧 Email: shaharbind569@example.com
+- 🐙 GitHub: shaharbind
+```
