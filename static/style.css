@@ -1,0 +1,140 @@
+/* General Body Style with Gradient Background */
+body {
+    font-family: Arial, sans-serif; /* Sets the font */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background: linear-gradient(45deg, #ff6a00, #ee0979, #1f4037); /* Adds a colorful gradient background */
+    background-size: 400% 400%; /* Ensures smooth animation */
+    animation: gradient 10s ease infinite; /* Animates the gradient background */
+}
+
+/* Animation for Gradient Background */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main Container - Centers content and spaces elements */
+.container {
+    width: 80%; /* Takes 80% of screen width */
+    margin: 50px auto; /* Centers it horizontally */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spreads sections apart */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 10px; /* Adds space between sections */
+}
+
+/* Upload Section (Left Side) */
+.upload-section {
+    text-align: center; /* Centers text */
+    width: 38%; /* Controls width of the upload section */
+    padding: 20px; /* Adds space inside */
+    background-color: #ffffff; /* Sets a white background */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+}
+
+/* Logo Styling */
+.logo {
+    display: block; /* Makes it a block element */
+    margin: 0 auto 10px; /* Centers it */
+    width: 180px; /* Sets logo size */
+}
+
+/* "Upload Your Image" Text Styling */
+.upload-label {
+    font-size: 30px; /* Sets font size */
+    font-weight: bold; /* Makes text bold */
+    background: linear-gradient(90deg, #ff416c, #ff4b2b); /* Adds a gradient effect */
+    -webkit-background-clip: text; /* Clips background to text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes text see-through with gradient */
+    display: inline-block; /* Ensures proper alignment */
+}
+
+/* File Input Styling */
+input[type="file"] {
+    display: block; /* Ensures it takes a full line */
+    margin: 8px auto; /* Centers it */
+    padding: 4px; /* Adds padding */
+    font-size: 18px; /* Increases font size */
+}
+
+/* "Generate Meme" Button Styling */
+.button {
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 16px; /* Sets font size */
+    font-weight: bold; /* Makes text bold */
+    color: #fff; /* Sets text color to white */
+    background: linear-gradient(to right, #f12711, #f5af19); /* Adds a gradient background */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds corners */
+    cursor: pointer; /* Changes cursor to pointer */
+    transition: all 0.3s; /* Smooth transition effect */
+    margin-top: 10px; /* Adds spacing above */
+}
+
+/* Hover Effect for Button */
+.button:hover {
+    background: linear-gradient(to right, #f5af19, #f12711); /* Reverses gradient on hover */
+}
+
+/* Meme Section (Right Side) */
+.meme-container {
+    width: 52%; /* Controls the size of the meme section */
+    text-align: center; /* Centers content */
+}
+
+/* Meme Content - Wraps Meme & Download Button */
+.meme-content {
+    display: flex;
+    flex-direction: column; /* Ensures meme and button are stacked */
+    align-items: center; /* Centers both elements horizontally */
+    gap: 10px; /* Space between meme and button */
+    width: 100%;
+}
+.download-button {
+    display: block;
+    width: fit-content; /* Ensures button is not too wide */
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s;
+    text-align: center;
+    margin-top: 0px; /* No extra spacing */
+}
+
+
+/* Meme Image Styling */
+#generated-meme {
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Ensures space between meme and button */
+}
+
+
+/* Hover Effect for Download Button */
+.download-button:hover {
+    background-color: #883e21; /* Changes color on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks sections vertically */
+        align-items: center; /* Centers content */
+    }
+
+    .meme-container,
+    .upload-section {
+        width: 100%; /* Makes sections take full width */
+    }
+}

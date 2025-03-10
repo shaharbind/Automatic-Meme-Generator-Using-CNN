@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Meme</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Meme Generator Logo" class="logo-image">
+    </div>
+
+    <h1>Your Meme</h1>
+    <img id="generated-meme" src="{{ meme_url }}" alt="Generated Meme">
+    
+    <a href="{{ meme_url }}" download>
+        <button>Download Meme</button>
+    </a>
+    <br>
+    <a href="/">Generate Another Meme</a>
+</body>
+</html>

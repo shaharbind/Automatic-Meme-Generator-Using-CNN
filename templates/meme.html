@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Meme is Ready!</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .meme {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 5px solid white;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .generate-again {
+            background-color: #4CAF50;
+        }
+        .generate-again:hover {
+            background-color: #45a049;
+        }
+        .download {
+            background-color: #2196F3;
+        }
+        .download:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        <h1>Your Meme is Ready!</h1>
+        <img src="{{ meme_url }}" alt="Generated Meme" class="meme">
+        <div class="buttons">
+            <a href="/" class="button generate-again">Generate Meme Again!</a>
+            <a href="{{ meme_url }}" download class="button download">Download Meme!!</a>
+        </div>
+    </div>
+</body>
+</html>

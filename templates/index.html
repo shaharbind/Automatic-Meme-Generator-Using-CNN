@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Upload Section (Left Side) -->
+        <div class="upload-section">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="MemeNep Logo" class="logo">
+            <label class="upload-label">Upload Your Image👓</label>
+            <form id="meme-form" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="file-input" required>
+                <button type="submit" class="button">Generate Meme</button>
+            </form>
+        </div>
+
+        <!-- Meme Section (Right Side) -->
+        <div class="meme-container" id="meme-container" style="display: none;">
+            <img id="generated-meme" src="" alt="Generated Meme">
+            <a id="download-link" href="#" class="download-button">Download Meme</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('meme-form').onsubmit = async function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            const response = await fetch('/', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json(); // Expect JSON response with image URL and caption
+
+            if (result && result.meme_url) {
+                const memeContainer = document.getElementById('meme-container');
+                const memeImage = document.getElementById('generated-meme');
+                const downloadLink = document.getElementById('download-link');
+
+                // Update the meme and download link
+                memeImage.src = result.meme_url;
+                downloadLink.href = result.meme_url;
+                downloadLink.download = 'generated_meme.jpg';
+
+                memeContainer.style.display = 'block';
+            }
+        };
+    </script>
+</body>
+</html>
