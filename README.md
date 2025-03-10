@@ -60,7 +60,7 @@ python app.py
 ## 📷 Example Output
 Here is an example of how the generated meme looks:
 
-![Generated Meme Example](path/to/example-image.png)  
+![Generated Meme Example]( https://github.com/shaharbind/Automatic-Meme-Generator-Using-CNN/blob/23b8d64fe9dc6ef1dec9ab0b700752f9f9e982fc/Screenshot%20(79).png)  
 
 ---
 
